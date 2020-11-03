@@ -1,0 +1,73 @@
+
+*{
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #eee;
+  }
+  
+  h1{
+    font-family:  'Chelsea Market', cursive;
+     /*Es la fuente a la cual he hecho un link a google fonts*/
+    color:  #444;
+    font-size: xx-large;
+  }
+  p{
+    color: red;
+    font-size: large;
+  }
+  html,body{
+    display: grid;
+    height: 70%;
+    place-items: center;
+    text-align: center;
+    background: lightyellow;
+  }
+  .heart input{
+    display: none;
+  }
+  /*para que solo aparezcan los corazones y que los botones del input no se muestren*/
+  .heart label{
+    font-size: 60px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+  }
+  input:not(:checked) ~ label:hover, 
+   input:not(:checked) ~ label:hover ~ label{
+    color: #444;
+  }
+  
+/*    input:checked ~ label:hover,
+  input:checked  ~ label {
+    /* ~  = “if the checkbox is checked, then the following X element is behaving like this”.*/
+    color: blue;
+  /* }  */
+
+
+  input:checked  ~ label {
+    /* ~  = “if the checkbox is checked, then the following X element is behaving like this”.*/
+    color: blue;
+  } 
+
+
+  input:not(:active) ~ label:hover, 
+  input:not(:active) ~ label:hover ~ label{
+    color:  red;
+    text-shadow: 0 0 20px #952;
+ }
+
+
+
+/*  input:not(:focus)  ~ label {
+  color:white;
+}  */
+
+/*  El problema de este codigo esque una vez clicado en el 
+corazon, no me quedan marcados los colores. Desaparece. 
+Muy chulo el efecto de abajo */ 
+
+/* input:not(:active) ~ label{
+  color: white;
+} */

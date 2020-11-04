@@ -1,27 +1,51 @@
-document.addEventListener("click", (evt) => {
-    const corazon5 = document.getElementById("input5");
-     const corazon4 = document.getElementById("input4");
-     const corazon3 = document.getElementById("input3");
-     const corazon2 = document.getElementById("input2");
-     const corazon1 = document.getElementById("input1");
-     let targetElement = evt.target;
-     let count = 0;
+// ************************
+// 1. AÑADIR EVENTOS AL DOM
+// ************************
 
-     do {
-       if (targetElement == corazon5 || targetElement == corazon4 || targetElement == corazon3 || targetElement == corazon2 || targetElement == corazon1 ){
-         // Do nothing, just return.
-         document.getElementById('insertInfo').textContent = "HAS CLICADO EN UN CORAZON" ;
-           count ++;
-        return;
-       }
-       // Go up the DOM.
-       // compreender mejor el funcionamento abajo:
-      targetElement = targetElement.parentNode;
-    } while (targetElement);
+// 1.1 Click reset colors
 
-  // //
-   document.getElementById('insertInfo').textContent = "has clicado fuera del corazon" ;
-   //document.getElementById("input5").classList.remove("input:checked ~ label");
+document.getElementById("base").onclick = function () { resetColorIcon() };
 
-   }
-   )
+// Link de interés: https://www.w3schools.com/jsref/event_onmouseout.asp
+
+// 1.2 Mouse over
+
+document.getElementById("1").onmouseover = function () { changeColorIcon(1) };
+document.getElementById("2").onmouseover = function () { changeColorIcon(2) };
+document.getElementById("3").onmouseover = function () { changeColorIcon(3) };
+document.getElementById("4").onmouseover = function () { changeColorIcon(4) };
+document.getElementById("5").onmouseover = function () { changeColorIcon(5) };
+
+// 1.3 Mouse click
+
+document.getElementById("1").onclick = function () { changeColorIcon(1) };
+document.getElementById("2").onclick = function () { changeColorIcon(2) };
+document.getElementById("3").onclick = function () { changeColorIcon(3) };
+document.getElementById("4").onclick = function () { changeColorIcon(4) };
+document.getElementById("5").onclick = function () { changeColorIcon(5) };
+
+
+// ************************
+// 2. CREAR FUNCIONES
+// ************************
+
+// 2.1 Colorear elementos
+
+function changeColorIcon(x) {
+  resetColorIcon();
+  // CUIDADO! sólocargar el primer evento de colorear, no el del padre que resetea el color!
+  event.stopPropagation();
+  console.log("CHANGE COLOR!! ", x);
+  for (var i = 1; i <= x; i++) {
+    document.getElementById(i).classList.add("icon-color-2");
+  }
+}
+
+// 2.2 Resetear elementos
+
+function resetColorIcon() {
+  console.log("RESET COLOR!! ");
+  for (var i = 1; i <= 5; i++) {
+    document.getElementById(i).classList.remove("icon-color-2");
+  }
+}

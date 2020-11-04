@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- character encoding -->
-        <meta charset="UTF-8" />
-        <!-- responsive -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- author -->
-        <meta name="author" content="Student: Ingrid Inara" />
-        <!-- description -->
-        <meta name="description" content=" Rating with HTML, CSS & JS Exercise by Ingrid Inara" />
-        <!-- keywords -->
-        <meta name="keywords" content="HTML, CSS, JS, RATING" />
-        <!-- import external font source: google fonts -->
-        <link
-          href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap"
-          rel="stylesheet"
-        />
-        <!-- CSS reset link -->
-    <link rel="stylesheet" href="reset.css" />
-        <!-- CSS style link -->
-        <link rel="stylesheet" href="style.css" />
-        <!-- Add icon library  https://www.w3schools.com/howto/howto_css_star_rating.asp -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>HEART RATING</title>
 
-      </head>
-<body>
+<head>
+    <!-- character encoding -->
+    <meta charset="UTF-8" />
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- author -->
+    <meta name="author" content="Student: Ingrid Inara" />
+    <!-- description -->
+    <meta name="description" content=" Rating with HTML, CSS & JS Exercise by Ingrid Inara" />
+    <!-- keywords -->
+    <meta name="keywords" content="HTML, CSS, JS, RATING" />
+    <!-- import external font source: google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet" />
+    <!-- CSS reset link -->
+    <link rel="stylesheet" href="reset.css" />
+    <!-- CSS style link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Add icon library  https://www.w3schools.com/howto/howto_css_star_rating.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>HEART RATING</title>
+
+</head>
+
+<!-- Evento resetear colores en el body -->
+<body id="base" style="width: 100%;height: 100vh;">
+
     <h1>HEART RATING</h1>
     <p id="insertInfo"></p>
 
-    
-     <div id="heart" class="heart">
-      <!--la caja que engloba los corazones--> 
-      <input type="radio" name="rating" id="input5" >
-      <label for="input5" class="fa fa-heart"></label>
-       <!-- la clase de font awsome es lo que da el formato de la figura del ratting, en este caso un corazon-->
-       <input type="radio" name="rating" id="input4" >
-       <label for="input4" class="fa fa-heart"></label>
-       <input type="radio" name="rating" id="input3" >
-      <label for="input3" class="fa fa-heart"></label>
-      <input type="radio" name="rating" id="input2" >
-      <label for="input2" class="fa fa-heart"></label>
-      <input type="radio" name="rating" id="input1" >
-      <label for="input1" class="fa fa-heart"></label>
-     </div>
+    <div id="container-icon">
+        <div class="col-sm text-center">
+            <!-- Evento colorear -->
+            <i class="far fa-grin-tongue-wink fa-8x icon-color" id="1"></i>
+        </div>
+        <div class="col-sm text-center">
+            <!-- Evento colorear -->
+            <i class="far fa-grin-tongue-wink fa-8x icon-color" id="2"></i>
+        </div>
+        <div class="col-sm text-center">
+            <!-- Evento colorear -->
+            <i class="far fa-grin-tongue-wink fa-8x icon-color" id="3"></i>
+        </div>
+        <div class="col-sm text-center">
+            <!-- Evento colorear -->
+            <i class="far fa-grin-tongue-wink fa-8x icon-color" id="4"></i>
+        </div>
+        <div class="col-sm text-center">
+            <!-- Evento colorear -->
+            <i class="far fa-grin-tongue-wink fa-8x icon-color" id="5"></i>
+        </div>
+    </div>
 
-    
-
-     <!-- CUSTOM JS link -->
-     <script src="script.js"></script>
+    <!-- CUSTOM JS link -->
+    <script src="script.js"></script>
 </body>
+
 </html>
